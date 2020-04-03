@@ -52,7 +52,6 @@ et chacun des .py est executable, pour être testé individuellement :
 
 - point important discuté, le triptyque (variable, valeurs, type), ou (instance, valeur, classe). Par exemple :
 
------------------------- | ----------------------------- | --------------
 variable ou instance     | valeurs                       | type ou classe
 ------------------------ | ----------------------------- | --------------
 age                      |   27                          | int
@@ -61,7 +60,6 @@ pi                       |   3.14                        | float
 math.pi                  |   3.141592653589793           | float
 card1                    |   ♠ (as de pique)             | Card
 card2                    |   u"\U0001F0B1" (as de coeur) | Card
------------------------- | ----------------------------- | --------------
 
 (on pourrait ajouter "plage de valeurs autorisées" mais je n'en ai pas vraiment parlé ce matin. À titre d'exo, vous pouvez réfléchir à ces plages.  Pour "age" c'est plus compliqué qu'il n'y parait, faites-moi penser à faire un quiz la semaine prochaine)
 
