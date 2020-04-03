@@ -1,3 +1,12 @@
+"""
+Ceci est le premier BROUILLON de cas test. 
+(il n'a aucune chance de fonctionner ; son seul but est de décider où on veut aller, et se figer une syntaxe.)
+
+Il est intéressant de le conserver pour voir l'évolution ; mais dans son etat actuel, on peut difficilement continuer à travailler dessus.
+
+Le cas "qui marche" est card2.py
+"""
+
 
 # enum Couleurs : ...
 # dict couleurs = { ... }

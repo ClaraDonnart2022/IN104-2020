@@ -1,12 +1,14 @@
 """
-Cartes 
+Module card2.
+
+Definit une classe Card et un petit cas-test qui demontre son utilite.
 
 
 TODO: 
 
   - coder la fonction str
-  - le init qui prend 0 ou 2 parametres
-  - coder la fonction(? ou attribut ?) points
+  - le init qui prend 0 ou 2 parametres (indication : chercher sur StackOverflow "python optional arguments in initializer of python class")
+  - coder points ; d'ailleurs, est-ce une fonction ou un attribut ? 
   - corriger le bug : qui est que le 10 est plus fort que Dame Roi Valet (7 8 9 V D R 10 As) 
 
   - bonus : ajouter les atouts
@@ -39,7 +41,7 @@ card1 = Card()
 card1.couleur = COEUR
 card1.valeur = 10
 
-card1.couleur = "VERTE"
+# card1.couleur = "VERTE"
 
 
 card2 = Card()
