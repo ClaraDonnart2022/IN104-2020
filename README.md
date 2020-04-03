@@ -5,7 +5,7 @@
 
 PEP 8 (https://www.python.org/dev/peps/pep-0008/) conventions are followed. In short:
 
-
+what         | style
 ------------ | --------------------------------------------------------------------
 classes      |  UpperCamelCase
 functions    |  lower_case_with_underscores()
