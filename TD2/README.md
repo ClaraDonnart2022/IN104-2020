@@ -63,6 +63,14 @@ card2                    |   u"\U0001F0B1" (as de coeur) | Card
 
 (on pourrait ajouter "plage de valeurs autorisées" mais je n'en ai pas vraiment parlé ce matin. À titre d'exo, vous pouvez réfléchir à ces plages.  Pour "age" c'est plus compliqué qu'il n'y parait, faites-moi penser à faire un quiz la semaine prochaine)
 
-- Pour la semaine prochaine, remplir ce qui est "TODO" dans card2.py
-- Pour ceux qui trouvent ça trop facile, créez un card3.py qui utilise des atouts.
+Pour la semaine prochaine :
+- remplir ce qui est "TODO" dans card2.py, d'abord individuellement
+- puis l'échanger (via git [1]) avec votre binome, travailler/critiquer/corriger son fichier
+- pour finalement vous mettre d'accord sur une version commune
+- Enfin, pour ceux qui trouvent ça trop facile, créez un card3.py qui utilise la couleur d'atout.
+
+[1] Je vous demande de passer par git pour mettre en pratique les branches de développement : 
+- le card2.py actuel (ma version) est le début de la branche master
+- votre travail individuel, vous le faites dans votre branche (appelons-les par ex dev_alice et dev_bob)
+- la version finale et commune sera "merge" dans master (par l'un de vous deux, qui joue le rôle d'intégrateur)
 
