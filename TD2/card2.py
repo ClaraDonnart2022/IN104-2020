@@ -7,10 +7,15 @@ COEUR, CARREAU, PIQUE, TREFLE = (0, 1, 2, 3)
 #valeur : 7, 8, 9, 10, 11, 12, 13, 14 
 
 class Card:
-    def __init__(self, couleur, valeur):
-        self.couleur = couleur
-        self.valeur = valeur
+    def __init__(self):
+        self.couleur = None
+        self.valeur = None
+        self.points = 0
+
         
+    # def __init__(self, couleur, valeur):
+    #     self.couleur = couleur
+    #     self.valeur = valeur
     
 
 
