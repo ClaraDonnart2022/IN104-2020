@@ -12,7 +12,7 @@
 # TD 2 - 1e partie (30 min)
 
 - Faire tout de suite l'inscription Gradescope, ça peut prendre du temps.
-  access code: MJVW68
+  access code dans les diapos du cours
 
 - Sous Linux, le pas faire le tuto Unix ; ne pas installer Anaconda ou WinPython : le python système est largement suffisant.
 - Sous Windows, préférer le "noyau Linux embarqué" :  https://www.numerama.com/tech/158150-le-shell-bash-sous-windows-10-ce-quil-faut-savoir.html 
