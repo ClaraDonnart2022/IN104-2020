@@ -92,24 +92,3 @@ Les 3 messages importants :
 https://diveinto.org/python3/unit-testing.html
 https://realpython.com/python-testing/
 
-
-
-
-
-# Travail demandé
-
-(fixme: c'est pas bon, faire les classes Deck, Players, Hand, Game sont plus compliquées que compléter Card)
-
-
-- chaque groupe a une mission différente : ajouter des fonctionnalité à la classe Card
-  - 1: atouts à la belote
-  - 2: bridge
-  - 3: tarot
-  - 4: syntaxe  card1 < card2
-  - 5: correction du bug du 10
-  - 6: tests unitaires de couverture de l'existant
-  - 7: Deck : shuffle() et deal()
-  - 8: Players, Game, ... ? architecure globale du jeu
-Le groupe 5 qui a le truc le plus simple devient aussi intégrateur !
-
-
