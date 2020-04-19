@@ -1,5 +1,6 @@
 import unittest
 import hanabi
+#import deck
 
 
 
@@ -50,6 +51,10 @@ class HandTest(unittest.TestCase):
 
     def test_len(self):
         self.assertEqual(5, len(self.hand1))
+        
+    def test_len_discard(self):             #vérifier que lorsque que l'on jette une carte et on reprend une, on garde une main valide
+        self.hand1.pop(3)
+        self.assertEqual(5,len(self.hand1))
     
     def test_shuffle(self):
         self.deck1.shuffle()
@@ -61,22 +66,31 @@ class HandTest(unittest.TestCase):
 
 class DeckTest(unittest.TestCase):
     # test __special__ functions
-    
+
 
     # test normal functions
     def setUp(self):
+        self.deck1 = hanabi.deck.Deck()
+        self.hand1 = hanabi.deck.Hand(self.deck1)
+
+
+    def test_shuffle1(self):
         pass
-
-
-    def test_shuffle(self):
-        pass
-
-
+        
+        
     def test_draw(self):
-        pass
+        c1 = hanabi.deck.Card('B', 4)
+        c2 = hanabi.deck.Card('R', 1)
+        c3 = hanabi.deck.Card('G', 4)
+        c4 = hanabi.deck.Card('B', 2)
+        c5 = hanabi.deck.Card('Y', 5)
+        deck=hanabi.deck.Deck([c1,c2,c3,c4,c5])
+        self.assertEqual(hanabi.deck.Deck.draw(deck),c1)
+        
 
     def test_deal(self):
-        pass
+        # hands=hanabi.deck.Deck.deal(self,5)                       # problème dont je ne vois pas l'erreur
+        # self.assertEqual(len(hands),5)
 
 
 class DeckTest2(unittest.TestCase):
