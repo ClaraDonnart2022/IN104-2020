@@ -1,6 +1,6 @@
 import unittest
 import hanabi
-#import deck
+
 
 
 
@@ -53,7 +53,12 @@ class HandTest(unittest.TestCase):
         self.assertEqual(5, len(self.hand1))
         
     def test_len_discard(self):             #vérifier que lorsque que l'on jette une carte et on reprend une, on garde une main valide
-        self.hand1.pop(3)
+        joueurs=5
+        c=4                                 #nombre de cartes par joueurs
+        pioche=50-joueurs*c
+        if pioche>0:
+            self.hand1.pop(3)
+            pioche-=1
         self.assertEqual(5,len(self.hand1))
     
     def test_shuffle(self):
@@ -79,18 +84,26 @@ class DeckTest(unittest.TestCase):
         
         
     def test_draw(self):
-        c1 = hanabi.deck.Card('B', 4)
-        c2 = hanabi.deck.Card('R', 1)
-        c3 = hanabi.deck.Card('G', 4)
-        c4 = hanabi.deck.Card('B', 2)
-        c5 = hanabi.deck.Card('Y', 5)
+        c1 = hanabi.deck.Card(hanabi.deck.Color.Blue, 4)
+        c2 = hanabi.deck.Card(hanabi.deck.Color.Red, 1)
+        c3 = hanabi.deck.Card(hanabi.deck.Color.Green, 4)
+        c4 = hanabi.deck.Card(hanabi.deck.Color.Blue, 2)
+        c5 = hanabi.deck.Card(hanabi.deck.Color.Yellow, 5)
         deck=hanabi.deck.Deck([c1,c2,c3,c4,c5])
         self.assertEqual(hanabi.deck.Deck.draw(deck),c1)
         
 
-    def test_deal(self):
-        # hands=hanabi.deck.Deck.deal(self,5)                       # problème dont je ne vois pas l'erreur
-        # self.assertEqual(len(hands),5)
+    def test_deal1(self):                               # vérifie que chaque joueur est distribué
+        hands=hanabi.deck.Deck.deal(self.deck1,5)                       
+        self.assertEqual(len(hands),5)
+       
+    def test_deal2(self):                               # vérifie que chaque joueur a une bonne main ( pour 5 joueurs, on a 4 cartes en main)
+        hands=hanabi.deck.Deck.deal(self.deck1,5) 
+        b=True
+        for i in range(len(hands)):
+            if len(hands[i])!= 4:
+                b=False
+        self.assertTrue(b)
 
 
 class DeckTest2(unittest.TestCase):
