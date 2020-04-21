@@ -3,6 +3,7 @@ import hanabi
 
 
 
+
 class ColorTest(unittest.TestCase):
     def test_str(self):
         colors = [(31, "Red"), (32, "Green"), (34, "Blue"), (33, "Yellow"), (37, "White")]
@@ -50,6 +51,10 @@ class HandTest(unittest.TestCase):
 
     def test_len(self):
         self.assertEqual(5, len(self.hand1))
+        
+    def test_len_discard(self):             #vérifier que lorsque que l'on jette une carte et on reprend une, on garde une main valide
+        self.hand1.pop(3)
+        self.assertEqual(5,len(self.hand1))
     
     def test_shuffle(self):
         self.deck1.shuffle()
@@ -61,22 +66,39 @@ class HandTest(unittest.TestCase):
 
 class DeckTest(unittest.TestCase):
     # test __special__ functions
-    
+
 
     # test normal functions
     def setUp(self):
+        self.deck1 = hanabi.deck.Deck()
+        self.hand1 = hanabi.deck.Hand(self.deck1)
+
+
+    def test_shuffle1(self):
         pass
-
-
-    def test_shuffle(self):
-        pass
-
-
+        
+        
     def test_draw(self):
-        pass
+        c1 = hanabi.deck.Card(hanabi.deck.Color.Blue, 4)
+        c2 = hanabi.deck.Card(hanabi.deck.Color.Red, 1)
+        c3 = hanabi.deck.Card(hanabi.deck.Color.Green, 4)
+        c4 = hanabi.deck.Card(hanabi.deck.Color.Blue, 2)
+        c5 = hanabi.deck.Card(hanabi.deck.Color.Yellow, 5)
+        deck=hanabi.deck.Deck([c1,c2,c3,c4,c5])
+        self.assertEqual(hanabi.deck.Deck.draw(deck),c1)
+        
 
-    def test_deal(self):
-        pass
+    def test_deal1(self):                               # vérifie que chaque joueur est distribué
+        hands=self.deck1.deal(5)
+        self.assertEqual(len(hands),5)
+       
+    def test_deal2(self):                               # vérifie que chaque joueur a une bonne main ( pour 5 joueurs, on a 4 cartes en main)
+        hands=self.deck1.deal(5) 
+        b=True
+        for hand in hands:
+            if len(hand) != 4:
+                b=False
+        self.assertTrue(b)
 
 
 class DeckTest2(unittest.TestCase):
