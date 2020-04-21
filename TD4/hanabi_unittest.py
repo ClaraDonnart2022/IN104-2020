@@ -53,12 +53,7 @@ class HandTest(unittest.TestCase):
         self.assertEqual(5, len(self.hand1))
         
     def test_len_discard(self):             #vérifier que lorsque que l'on jette une carte et on reprend une, on garde une main valide
-        joueurs=5
-        c=4                                 #nombre de cartes par joueurs
-        pioche=50-joueurs*c
-        if pioche>0:
-            self.hand1.pop(3)
-            pioche-=1
+        self.hand1.pop(3)
         self.assertEqual(5,len(self.hand1))
     
     def test_shuffle(self):
@@ -94,14 +89,14 @@ class DeckTest(unittest.TestCase):
         
 
     def test_deal1(self):                               # vérifie que chaque joueur est distribué
-        hands=hanabi.deck.Deck.deal(self.deck1,5)                       
+        hands=self.deck1.deal(5)
         self.assertEqual(len(hands),5)
        
     def test_deal2(self):                               # vérifie que chaque joueur a une bonne main ( pour 5 joueurs, on a 4 cartes en main)
-        hands=hanabi.deck.Deck.deal(self.deck1,5) 
+        hands=self.deck1.deal(5) 
         b=True
-        for i in range(len(hands)):
-            if len(hands[i])!= 4:
+        for hand in hands:
+            if len(hand) != 4:
                 b=False
         self.assertTrue(b)
 
