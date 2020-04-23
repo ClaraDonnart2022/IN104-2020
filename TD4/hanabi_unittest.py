@@ -102,7 +102,13 @@ class DeckTest(unittest.TestCase):
 
 
 class DeckTest2(unittest.TestCase):
-    pass
+    def setUp(self):
+        self.deck1=hanabi.deck.Deck()
+    
+    def test_draw(self):
+        l1=self.deck1.draw()
+        l2=self.deck1.cards.pop(0)
+        self.assertEqual(l1,l2)
 
 
 
