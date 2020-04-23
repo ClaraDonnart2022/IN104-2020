@@ -65,17 +65,35 @@ class DeckTest(unittest.TestCase):
 
     # test normal functions
     def setUp(self):
-        pass
-
+        self.deck=hanabi.deck.Deck()
 
     def test_shuffle(self):
-        pass
-
+        l1=self.deck.cards.copy()
+        self.deck.shuffle()
+        l2=self.deck.cards
+        self.assertNotEqual(l1, l2)
 
     def test_draw(self):
+        l1=self.deck.cards.copy()
+        card_1=self.deck.draw()
+        l2=self.deck.cards
+        self.assertEqual(len(l1),len(l2)+1)
+
         pass
 
     def test_deal(self):
+        #For 4 players
+        l1=self.deck.cards.copy()
+        hands=self.deck.deal(4)
+        l2=self.deck.cards
+        self.assertEqual(len(l1), len(l2)+16)
+        self.assertEqual(len(hands),4)
+         #Only 2 players (So 5 cards must be deal)
+        l1=self.deck.cards.copy()
+        hands=self.deck.deal(2)
+        l2=self.deck.cards
+        self.assertEqual(len(l1), len(l2)+10)
+
         pass
 
 
