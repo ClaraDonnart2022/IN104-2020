@@ -79,8 +79,6 @@ class DeckTest(unittest.TestCase):
         l2=self.deck.cards
         self.assertEqual(len(l1),len(l2)+1)
 
-        pass
-
     def test_deal(self):
         #For 4 players
         l1=self.deck.cards.copy()
@@ -93,8 +91,6 @@ class DeckTest(unittest.TestCase):
         hands=self.deck.deal(2)
         l2=self.deck.cards
         self.assertEqual(len(l1), len(l2)+10)
-
-        pass
 
 
 class DeckTest2(unittest.TestCase):
