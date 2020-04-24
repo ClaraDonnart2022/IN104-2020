@@ -122,6 +122,14 @@ class GameTest(unittest.TestCase):
         game.quiet = True
         game.turn('p3')  # check that we can play blindly
 
+
+    def test_chgt_nbr_joueurs(self):
+        for i in range (2,6):
+            game = hanabi.Game(i)
+            ai = hanabi.ai.Cheater(game)
+            game.ai = ai
+            game.run()
+
     # lines 227, 261
     def test_B1(self):
         pass
