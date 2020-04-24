@@ -2,7 +2,8 @@
 
 On n'a *pas* discuté de (y penser pour le TD6) :
 - rapid prototyping
-- invariants d'un objet pour les tests unitaires.
+- invariants d'un objet pour les tests unitaires
+- @property
 
 
 On a discuté aujourd'hui des points suivants : 
