@@ -142,7 +142,7 @@ class GameTest(unittest.TestCase):
 
     # lines 295, 329
 
-
+    #test Dylan Jaoui pour un pull request j'ai pas vraiment d'idées de test unitaire
 
     # lines 329, 363
 
