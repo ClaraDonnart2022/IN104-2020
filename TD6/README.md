@@ -12,7 +12,7 @@ et le fichier source qui lui correspond :
 https://raw.githubusercontent.com/JDGaraudEnsta/misc/master/README.md
 
 
-Pour visualiser, vous pouvez l'uploader sur github, ou utiliser pandoc :
+Pour visualiser, vous pouvez l'uploader sur github, ou utiliser pandoc pour le convertir en html ou pdf :
 
     pandoc -s --toc README.md --css=./doc/github-pandoc.css -o README.html
 
