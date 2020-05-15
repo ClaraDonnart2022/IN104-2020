@@ -31,7 +31,7 @@ Détaillez celui ou ceux qui vous semblent le plus pertinents, intéressants, o�
 Par exemple : 
 - dans deck.py, j'ai choisi de gérer le dernier tour de jeu à travers une liste `self.last_players`.
 La technique est intéressante même si elle s'est avérée fragile lorsque un joueur `e(x)amine` le jeu.
-- si vous voulez insérer un gros morceau de code, il suffit de mettre 3 back-ticks ```: 
+- si vous voulez insérer un gros morceau de code, il suffit de mettre 3 back-ticks ``` et ça donne : 
 ```python
     def add_blue_coin(self):
         if self.blue_coins == 8:
