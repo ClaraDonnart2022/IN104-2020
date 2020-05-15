@@ -34,7 +34,7 @@ La technique est intéressante même si elle s'est avérée fragile lorsque un j
 - etc.
 
 
-## Tests unitaires
+## Tests unitaires ou de non-régression
 
 Présentez quelques (disons 2) tests unitaires.
 Dans l'idéal, pour celles et ceux qui sont tombés sur un (gros) bug qui leur a pris du temps, il devrait y avoir un test unitaire qui protège contre sa réapparition.
