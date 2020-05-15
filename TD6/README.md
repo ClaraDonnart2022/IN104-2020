@@ -31,7 +31,14 @@ Détaillez celui ou ceux qui vous semblent le plus pertinents, intéressants, o�
 Par exemple : 
 - dans deck.py, j'ai choisi de gérer le dernier tour de jeu à travers une liste `self.last_players`.
 La technique est intéressante même si elle s'est avérée fragile lorsque un joueur `e(x)amine` le jeu.
-- etc.
+- si vous voulez insérer un gros morceau de code, il suffit de mettre 3 back-ticks ```: 
+```python
+    def add_blue_coin(self):
+        if self.blue_coins == 8:
+            raise ValueError("Already 8 blue coins. Can't get an extra one.")
+        self.blue_coins += 1
+
+```
 
 
 ## Tests unitaires ou de non-régression
